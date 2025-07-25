@@ -136,15 +136,6 @@ The backend is organized as a monorepo with three microservices:
 ## Future Enhancements
 - **Mobile App**: Develop a React Native app to reuse APIs and WebSocket for mobile access, with push notifications.
 - **AI Integration**: Add a Python FastAPI microservice (`/backend/ai-service`) for task prioritization and NLP-based categorization, integrated via REST or gRPC.
-- Explore xAI’s API (https://x.ai/api) for advanced AI features.
-
-## Contributing
-Contributions are welcome! Please:
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/your-feature`).
-3. Commit changes (`git commit -m "Add your feature"`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Open a pull request.
 
 ## License
 MIT License. See [LICENSE](LICENSE) for details.
