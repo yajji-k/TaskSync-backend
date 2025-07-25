@@ -27,10 +27,10 @@ TaskSync is a web-based task management tool inspired by Trello and Asana, enabl
 - **Scalable Design**: Microservices architecture for modularity and future extensions.
 
 ## Tech Stack
-- **Backend**: Spring Boot (Java), Spring Data JPA (PostgreSQL), Spring Security (JWT, Google OAuth), Spring WebSocket (STOMP).
-- **Database**: PostgreSQL.
+- **Backend**: Spring Boot (Java), Spring Data JPA (Mysql), Spring Security (JWT, Google OAuth), Spring WebSocket (STOMP).
+- **Database**: Mysql.
 - **Tools**: Maven (dependency management), Docker (containerization), GitHub (version control), Postman (API testing).
-- **Deployment**: AWS Elastic Beanstalk or Heroku (backend), Railway or AWS RDS (PostgreSQL).
+- **Deployment**: AWS Elastic Beanstalk or Heroku (backend), Railway or AWS RDS (Mysql).
 
 ## Microservices Architecture
 The backend is organized as a monorepo with three microservices:
@@ -54,7 +54,7 @@ The backend is organized as a monorepo with three microservices:
 ### Prerequisites
 - Java 17
 - Maven 3.8+
-- PostgreSQL 15
+- Mysql 15
 - Docker (optional for containerization)
 - Node.js (for frontend integration, if applicable)
 - Google OAuth credentials (for SSO)
@@ -66,8 +66,8 @@ The backend is organized as a monorepo with three microservices:
    cd task-sync-backend
    ```
 
-2. **Set Up PostgreSQL**:
-   - Install PostgreSQL locally or use a hosted service (e.g., Railway).
+2. **Set Up Mysql**:
+   - Install Mysql locally or use a hosted service (e.g., Railway).
    - Create a database named `task_manager`.
    - Run the following SQL to create tables:
      - `users`: id, email, password (hashed), role, created_at
@@ -77,7 +77,7 @@ The backend is organized as a monorepo with three microservices:
    - Create `.env` files in each microservice directory (`auth-service`, `task-service`, `websocket-service`).
    - Add:
      ```
-     SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/task_manager
+     SPRING_DATASOURCE_URL=jdbc:Mysql://localhost:5432/task_manager
      SPRING_DATASOURCE_USERNAME=your_username
      SPRING_DATASOURCE_PASSWORD=your_password
      JWT_SECRET=your_jwt_secret
@@ -122,7 +122,7 @@ The backend is organized as a monorepo with three microservices:
    - Deploy each microservice to AWS Elastic Beanstalk or Heroku.
    - Configure environment variables for database and OAuth.
 2. **Database**:
-   - Host PostgreSQL on Railway or AWS RDS.
+   - Host Mysql on Railway or AWS RDS.
 3. **Docker** (Optional):
    - Use Dockerfiles in `/deploy` to containerize microservices.
    - Deploy with `docker-compose` or a cloud orchestrator.
